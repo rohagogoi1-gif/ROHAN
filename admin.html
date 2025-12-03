@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin — Anime Story Web</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body class="light">
+<main style="max-width:1000px;margin:18px auto;padding:0 12px">
+  <section class="card" id="authSection">
+    <h2>Admin / User Login</h2>
+    <div id="authMsg" class="small"></div>
+    <input id="authUser" placeholder="Username">
+    <input id="authPass" placeholder="Password" type="password">
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button id="loginBtn" class="btn">Login</button>
+      <button id="registerBtn" class="btn">Register</button>
+      <button id="logoutBtn" class="btn hidden">Logout</button>
+    </div>
+    <div id="loggedAs" class="small" style="margin-top:8px"></div>
+    <div id="changePassSection" class="hidden" style="margin-top:8px">
+      <input id="newPass" placeholder="New password" type="password">
+      <button id="changePassBtn" class="btn">Change Password</button>
+    </div>
+  </section>
+
+  <section id="adminPanel" class="card hidden">
+    <h2>Admin Panel</h2>
+    <input id="storyTitle" placeholder="Story Title">
+    <input id="storyTags" placeholder="Tags (comma separated)">
+    <input id="storyThumbnail" type="file" accept="image/*">
+    <div style="display:flex;gap:8px;margin-top:8px">
+      <button id="addStoryBtn" class="btn">Add Story</button>
+      <button id="exportAllBtn" class="btn">Export All (JSON)</button>
+    </div>
+
+    <div id="storyList" style="margin-top:12px"></div>
+
+    <div id="storyEditSection"></div>
+  </section>
+</main>
+
+<script src="script_admin.js"></script>
+</body>
+</html>
